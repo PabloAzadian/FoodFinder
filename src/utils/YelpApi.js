@@ -1,5 +1,5 @@
 import {fetch as fetchPolyfill} from 'whatwg-fetch'
-const apiKey = "29Z1NDZuWGbtFnqrJ5uqTFe1eZl5mT8rcWL5sedTr-pieBqibXHFxo6OvNhzk7uUFyXeGE0WJolaFJY6qICiTJDpEahbXQb3nxwzhztq7BQOThwgvdKWRbQPj3mpZHYx";
+const apiKey = "";
 const apiUrl = "https://api.yelp.com/v3/businesses/search";
 const corsAnywhereUrl = "https://cors-anywhere.herokuapp.com/";
 
