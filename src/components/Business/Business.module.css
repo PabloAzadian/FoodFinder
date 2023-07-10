@@ -13,11 +13,13 @@
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
-  background: #000;
+  background: #d6d1c7;
+  box-shadow: 10px 10px 5px #b9ac75;
 }
 
 .imageContainer img {
   width: 100%;
+  background-color: #786f46;
 }
 
 .Business h2 {

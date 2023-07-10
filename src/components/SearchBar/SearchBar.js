@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./SearchBar.module.css";
+import search from "../../utils/YelpApi";
 
 const sortByOptions = {
   "Best Match": "best_match",
@@ -7,7 +8,7 @@ const sortByOptions = {
   "Most Reviewed": "review_count",
 };
 
-const SearchBar = () => {
+const SearchBar = ({ handleSearch }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [location, setLocation] = useState("");
   const [selectedSortingOption, setSelectedSortingOption] = useState("");
@@ -26,8 +27,9 @@ const SearchBar = () => {
   };
 
   const handleSubmit = () => {
-    console.log(`Searching Yelp with ${searchTerm}, ${location}, ${selectedSortingOption}`)
-  }
+    handleSearch(searchTerm, location, selectedSortingOption); // Pass the desired search parameters
+  };
+  
 
   const renderSortByOptions = () => {
     return Object.keys(sortByOptions).map((sortByOption) => {
@@ -63,7 +65,7 @@ const SearchBar = () => {
         />
       </div>
       <div className={styles.SearchBarSubmit}>
-        <a onClick={handleSubmit}>Let's Go</a>
+        <a href="#" onClick={handleSubmit}>Let's Go</a>
       </div>
     </div>
   );
